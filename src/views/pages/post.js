@@ -3,21 +3,15 @@ import Header from '../components/Header.js';
 import Footer from '../components/Footer.js';
 import Title from '../components/Title.js';
 import Container from '../components/Container.js';
+import PostForm from '../components/PostForm.js';
 
 const Post = () => {
   return (
     <div>
       <Header />
       <Container>
-        <Title content="落単情報登録" />
-        <form className="columns">
-          <div className="column">
-            
-          </div>
-          <div className="column">
-
-          </div>
-        </form>
+        <Title title="落単情報登録" />
+        <PostForm />
       </Container>
       <Footer />
     </div>

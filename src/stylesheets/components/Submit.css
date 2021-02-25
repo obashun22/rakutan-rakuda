@@ -1,0 +1,9 @@
+.submit-btn {
+  background-color: var(--theme-color);
+  color: white;
+  padding: 0px 40px;
+}
+
+.submit-btn:hover {
+  color: lightgray;
+}

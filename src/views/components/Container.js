@@ -5,7 +5,7 @@ const Container = (props) => {
   return (
     <div className="section">
       <div className="container is-max-widescreen">
-        <div className="ht-5">
+        <div className="">
           { props.children }
         </div>
       </div>

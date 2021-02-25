@@ -4,7 +4,7 @@ footer {
 }
 
 footer nav {
-  padding: 20px 0px;
+  padding: 35px 0px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -17,7 +17,7 @@ footer nav a {
 
 footer p {
   color: white;
-  padding: 20px 0px;
+  padding: 10px 0px 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -26,7 +26,7 @@ footer p {
   }
 
   footer nav {
-    padding: 10px 0px;
+    padding: 15px 0px;
     flex-direction: column;
   }
 }
