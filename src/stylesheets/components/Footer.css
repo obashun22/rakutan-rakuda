@@ -1,0 +1,32 @@
+
+footer {
+  background-color: var(--theme-color);
+}
+
+footer nav {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer nav a {
+  width: 200px;
+  line-height: 30px;
+}
+
+footer p {
+  color: white;
+  padding: 20px 0px;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    font-size: 0.9rem;
+  }
+
+  footer nav {
+    padding: 10px 0px;
+    flex-direction: column;
+  }
+}

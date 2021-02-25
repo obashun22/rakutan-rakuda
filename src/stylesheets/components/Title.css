@@ -1,0 +1,11 @@
+.content-title {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 2px solid #555;
+}
+
+@media screen and (max-width: 768px) {
+  .content-title {
+    padding: 5px;
+  }
+}

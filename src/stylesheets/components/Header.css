@@ -1,0 +1,40 @@
+:root {
+  --theme-color: #4A6151;
+}
+
+header nav {
+  background-color: var(--theme-color);
+  height: 90px;
+  padding: 0px 50px;
+  display: flex;
+  align-items: center;
+}
+
+header .logo {
+  height: 65px;
+  margin-top: 10px;
+}
+
+header .nav-right {
+  margin-left: auto;
+}
+
+header .link-msg::after {
+  content: "落単情報を登録";
+}
+
+
+@media screen and (max-width: 768px) {
+  header nav {
+    padding: 0px 16px;
+    height: 60px;
+  }
+
+  header .logo {
+    height: 40px;
+  }
+
+  header .link-msg::after {
+    content: "";
+  }
+}
