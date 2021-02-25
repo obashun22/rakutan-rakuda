@@ -13,6 +13,12 @@ code {
     monospace;
 }
 
+:root {
+  --theme-color: #4A6151;
+  --theme-color-hover: #667d6e;
+  --theme-color-light: #97ad9e;
+}
+
 /* for development */
 
 .pink {

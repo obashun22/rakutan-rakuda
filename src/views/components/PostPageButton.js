@@ -1,8 +1,8 @@
 import React from 'react';
-import "../../stylesheets/components/PostButton.css"
+import "../../stylesheets/components/PostPageButton.css"
 import { Link } from 'react-router-dom';
 
-const PostButton = () => {
+const PostPageButton = () => {
   return (
     <div className="nav-right">
         <Link to="/Post" className="killLinkStyle btn">
@@ -12,4 +12,4 @@ const PostButton = () => {
   );
 };
 
-export default PostButton;
+export default PostPageButton;

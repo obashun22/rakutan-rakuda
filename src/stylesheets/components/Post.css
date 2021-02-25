@@ -1,0 +1,66 @@
+#post {
+  margin: 25px 30px;
+  border: 1px solid #dfdfdf;
+}
+
+#post a {
+  color: inherit;
+}
+
+#post a:hover {
+  opacity: 0.7;
+}
+
+/* 情報 */
+.info {
+  text-align: left;
+  position: relative;
+}
+
+.info {
+  font-size: 0.8em;
+}
+
+/* 授業情報 */
+.class-info .property {
+  color: #888;
+}
+
+/* 評価 */
+.review-info {
+  color: #888;
+}
+
+.review {
+  font-size: 0.5em;
+  font-weight: bold;
+  padding: 2px 4px;
+  color: #fff;
+  background-color: var(--theme-color-light);
+  border-radius: 3px;
+}
+
+/* コメント */
+.comment {
+  text-align: left;
+}
+
+.comment-top {
+  display: flex;
+  align-items: center;
+}
+
+.comment .setting-icon {
+  margin-left: auto;
+}
+
+.comment p {
+  font-size: 0.9rem;
+  max-width: 700px;
+}
+
+@media screen and (max-width: 768px) {
+  #post {
+    margin: 20px 0px;
+  }
+}

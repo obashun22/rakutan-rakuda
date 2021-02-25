@@ -1,3 +1,31 @@
-#tmp {
-  height: 400px;
+.catchphrase {
+  font-family: "ヒラギノ丸ゴ Pro W4";
+  letter-spacing: 0.1em;
+}
+
+.precaution {
+  font-size: 0.5rem;
+  text-align: left;
+  margin: 5px;
+}
+
+.top .search {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+#search-bar a {
+  background-color: var(--theme-color);
+  letter-spacing: 0.5rem;
+  text-indent: 0.5rem;
+  text-align: center;
+  padding: 0px 25px;
+}
+
+#search-bar a:hover {
+  background-color: var(--theme-color-hover);
+}
+
+.top .strong {
+  font-size: 1.1em;
 }
