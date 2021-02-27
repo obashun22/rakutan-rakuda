@@ -8,6 +8,11 @@
 }
 
 .btn:hover {
+  color: white;
+  opacity: 0.8;
+}
+
+.btn:active {
   color: lightgray;
   border-color: lightgray;
 }

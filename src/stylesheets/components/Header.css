@@ -16,8 +16,9 @@ header .nav-right {
   margin-left: auto;
 }
 
+/* 画面を縮小した時に文字は消す */
 header .link-msg::after {
-  content: "落単情報を登録";
+  content: " 落単情報を登録";
 }
 
 

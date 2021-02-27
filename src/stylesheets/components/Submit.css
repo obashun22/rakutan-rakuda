@@ -1,9 +1,19 @@
 .submit-btn {
   background-color: var(--theme-color);
   color: white;
-  padding: 0px 40px;
+  padding: 0px 30px;
 }
 
 .submit-btn:hover {
+  color: white;
+  opacity: 0.95;
+}
+
+.submit-btn:active {
+  border: none;
+  opacity: 0.9;
+}
+
+.submit-btn:focus {
   color: lightgray;
 }

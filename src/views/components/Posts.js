@@ -5,8 +5,8 @@ const Posts = (props) => {
   return (
     <div className="mb-6">
       {
-        props.posts.map( (post) => {
-          return <Post post={ post } />
+        props.posts.map( (post, i) => {
+          return <Post key={i} onClick={ props.onClick } post={ post } />
         })
       }
     </div>

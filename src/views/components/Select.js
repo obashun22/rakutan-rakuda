@@ -4,17 +4,18 @@ const Select = (props) => {
   return (
     <div className="field is-horizontal my-4">
       <div className="field-label is-normal">
-        <label class="label">{ props.label }</label>
+        <label className="label">{ props.label }</label>
       </div>
-      <div class="field-body">
-        <div class="field">
+      <div className="field-body">
+        <div className="field">
           <div className="control is-expanded">
             <div className="select is-fullwidth">
-              <select name="">
+              <select onChange={ props.onChange }>
                 {
-                  props.categories.map( (category) => {
+                  // ここでclassとするとエラー吐くので命名には気を付ける
+                  props.categories.map( (category, i) => {
                     return (
-                      <option>{ category }</option>
+                      <option key={i}>{ category }</option>
                     )
                   })
                 }

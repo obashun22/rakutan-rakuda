@@ -10,6 +10,9 @@ const Footer = (props) => {
         <Link to="/" className="killLinkStyle has-text-white">
           ホーム
         </Link>
+        <Link to="/Request" className="killLinkStyle has-text-white">
+          削除依頼
+        </Link>
         <a
           target="_blank"
           href="https://terms-page.netlify.app/ja/privacy?company=落単らくだ"

@@ -1,0 +1,15 @@
+.text-content h3 {
+  padding: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #333;
+}
+
+.text-content p {
+  margin: 10px 5px;
+}
+
+.text-content li:before {
+  content: "・";
+}
