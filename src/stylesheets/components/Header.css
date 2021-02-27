@@ -18,7 +18,7 @@ header .nav-right {
 
 /* 画面を縮小した時に文字は消す */
 header .link-msg::after {
-  content: " 落単情報を登録";
+  content: " 落単情報を投稿";
 }
 
 
@@ -33,6 +33,6 @@ header .link-msg::after {
   }
 
   header .link-msg::after {
-    content: "";
+    content: " 投稿";
   }
 }

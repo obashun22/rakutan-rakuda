@@ -14,7 +14,7 @@ const Home = () => {
   const guide = "過去に単位を落とした人の投稿を検索できます。";
   const alert = <span style={{color: "red"}}>条件に一致する投稿がありません。</span>;
   // アナウンスできるように創っておいたので広告等したい時は使ってね
-  // const announce = "【お知らせ】落単してしまったそこの貴方、落単情報を登録しませんか？";
+  // const announce = "【お知らせ】落単してしまったそこの貴方、落単情報を投稿しませんか？";
   const announce = "";
   const maxPosts = 100;
 

@@ -9,7 +9,7 @@ import Submit from '../components/Submit.js';
 
 const Title = (props) => {
   // formの入力に必要な情報を初期化
-  const categorieOptions = ["全学教養科目", "文系教養科目", "理系教養科目", "文系基礎科目", "理系基礎科目", "理系基礎（文系）", "理系基礎（理系）", "言語文化I", "言語文化II", "言語文化III", "基礎セミナー", "健康・スポーツ科学", "開放科目", "専門科目", "文学部専門科目", "教育学部専門科目", "法学部専門科目", "経済学部専門科目", "情報学部専門科目", "情報文化学部専門科目", "理学部専門科目", "医学部専門科目", "工学部専門科目", "農学部専門科目", "大学院", "不明", "その他"];
+  const categorieOptions = ["全学教養科目", "文系教養科目", "理系教養科目", "文系基礎科目", "理系基礎科目", "理系基礎（文系）", "理系基礎（理系）", "言語文化I", "言語文化II", "言語文化III", "基礎セミナー", "健康・スポーツ科学", "開放科目", "専門科目", "文学部専門科目", "教育学部専門科目", "法学部専門科目", "経済学部専門科目", "情報学部専門科目", "情報文化学部専門科目", "理学部専門科目", "医学部専門科目", "工学部専門科目", "農学部専門科目", "G30", "大学院", "不明", "その他"];
   const yearOptions = [];
   // 最新の年度を先頭にする
   let date = new Date();
@@ -20,7 +20,7 @@ const Title = (props) => {
   const evaluationOptions = ["最悪", "悪い", "普通", "良い", "最良"];
   const causeOptions = ["勉強不足", "内容が難しかった", "テストでコケた", "提出物を出していない", "出席が足りなかった", "やむを得ない事情", "不明", "その他"]
   const deficiencyMsg = "入力内容に不備があります。すべての欄に記入してください。";
-  const postErrorMsg = "登録に失敗しました。再度登録してください。";
+  const postErrorMsg = "投稿に失敗しました。再度投稿してください。";
 
   // 入力内容は常にuseStateで管理／axiosでPostする際に便利
   const [lecture, setLecture] = useState('');
@@ -46,7 +46,7 @@ const Title = (props) => {
   //   console.log(cause);
   // }, [lecture, teacher, category, year, term, comment, evaluation, cause]);
 
-  // 登録処理／サーバにPostする
+  // 投稿処理／サーバにPostする
   const submit = (e) => {
     // 画面遷移するのを防止
     e.preventDefault();
@@ -69,7 +69,7 @@ const Title = (props) => {
       }
       })
       .catch((err) => {
-        console.log("投稿登録時にエラー発生");
+        console.log("投稿時にエラー発生");
         console.log(err);
         setError(postErrorMsg);
       })
@@ -95,7 +95,7 @@ const Title = (props) => {
 
       </div>
       <p className="post-error">{ error }</p>
-      <Submit title="登録する" />
+      <Submit title="投稿する" />
     </form>
   );
 };

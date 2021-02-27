@@ -10,7 +10,7 @@ const Post = () => {
     <div>
       <Header />
       <Container>
-        <Title title="落単情報登録" />
+        <Title title="落単情報投稿" />
         <PostForm />
       </Container>
       <Footer />
