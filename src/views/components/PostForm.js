@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router';
-import axios from 'axios';
 import "../../stylesheets/components/PostForm.css";
 import { postNewPost } from '../../api/PostAPI.js';
 import Input from '../components/Input.js';

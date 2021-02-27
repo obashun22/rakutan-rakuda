@@ -15,6 +15,7 @@ const Footer = (props) => {
         </Link>
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://terms-page.netlify.app/ja/privacy?company=落単らくだ"
           className="killLinkStyle has-text-white">
           プライバシーポリシー
