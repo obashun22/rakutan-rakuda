@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { getLatestPosts, getSearchPosts } from '../../api/PostAPI.js';
 import "../../stylesheets/views/Index.css";
 import Header from '../components/Header.js';
@@ -27,7 +26,7 @@ const Home = () => {
   // 検索バーのしたの文字を管理
   const [notion, setNotion] = useState(guide);
 
-  // 初期読み込み／最新の投稿３件を取得
+  // 初期読み込み／最新の投稿６件を取得
   useEffect(() => {
     getLatestPosts()
       .then(res => {

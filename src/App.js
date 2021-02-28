@@ -13,6 +13,7 @@ function App() {
         <Route exact path='/' component={ Home }/>
         <Route path='/Post' component={ Post }/>
         <Route path='/Request' component={ Request }/>
+        {/* Netlify（本番環境）でURL直打ちするとRouterがうまく機能しないのでAdminは開発環境で利用しよう） */}
         <Route path='/Admin' component={ Admin }/>
       </Router>
     </div>
