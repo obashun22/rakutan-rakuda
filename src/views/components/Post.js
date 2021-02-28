@@ -22,8 +22,8 @@ const Post = (props) => {
           </div>
           {/* 評価 */}
           <div className="review-info mt-4">
-            <p className="evaluation">内容: <span className="review">{ post.evaluation }</span></p>
-            <p className="cause">原因: <span className="review">{ post.cause }</span></p>
+            <p className="evaluation">授業評価: <span className="review">{ post.evaluation }</span></p>
+            <p className="cause">落単理由: <span className="review">{ post.cause }</span></p>
           </div>
         </div>
 

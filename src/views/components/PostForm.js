@@ -85,7 +85,7 @@ const Title = (props) => {
           <Select onChange={ (e) => setCategory(e.target.value) } label="授業区分" categories={ categorieOptions } />
           <Select onChange={ (e) => setYear(e.target.value) } label="開講年度" categories={ yearOptions } />
           <Select onChange={ (e) => setTerm(e.target.value) } label="開講学期" categories={ termOptions } />
-          <Select onChange={ (e) => setEvaluation(e.target.value) } label="評価" categories={ evaluationOptions } />
+          <Select onChange={ (e) => setEvaluation(e.target.value) } label="授業評価" categories={ evaluationOptions } />
           <Select onChange={ (e) => setCause(e.target.value) } label="落単理由" categories={ causeOptions } />
         </div>
         
