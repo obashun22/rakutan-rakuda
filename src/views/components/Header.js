@@ -8,9 +8,9 @@ const Header = (props) => {
   <header>
     <nav>
       <div className="nav-left">
-        <Link to="/" className="killLinkStyle">
+        <a href="/" className="killLinkStyle">
           <img src={ logo } alt="Logo" className="logo"/>
-        </Link>
+        </a>
       </div>
         { props.children }
     </nav>
