@@ -8,7 +8,7 @@ import { updateLike } from '../../api/PostAPI';
 import { useEffect } from 'react/cjs/react.development';
 
 const Post = (props) => {
-  const post = props.post;
+  const [post, setPost] = useState(props.post);
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(0);
   useEffect(() => {
@@ -26,7 +26,7 @@ const Post = (props) => {
     if (log.includes(post.id)) { // 既に草を押しているか判定
       setIsLiked(true);
     }
-  }, [post]); // postはuseEffectの外部に依存しているので配列に追加
+  }, []);
   return (
     <div id="post" className="card">
       <div className="columns is-marginless">
