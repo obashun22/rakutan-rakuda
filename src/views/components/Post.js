@@ -28,7 +28,7 @@ const Post = (props) => {
     if (log.includes(0)) { // 既に草を押しているか判定
       setIsLiked(true);
     }
-  }, [post]);
+  }, [post, setLikeCount, setIsLiked]);
   return (
     <div id="post" className="card">
       <div className="columns is-marginless">
