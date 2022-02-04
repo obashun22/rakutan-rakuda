@@ -18,6 +18,10 @@ export const getSearchPosts = (keyword) => {
   });
 };
 
+export const updateLike = (id) => {
+  return axios.get(`${URI}/api/v1/posts/${id}/like`);
+}
+
 export const postNewPost = (lecture, teacher, category, year, term, comment, evaluation, cause) => {
   return axios.post(`${URI}/api/v1/posts`, {
     lecture: lecture,

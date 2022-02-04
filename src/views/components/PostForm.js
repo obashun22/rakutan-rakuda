@@ -81,7 +81,7 @@ const Title = (props) => {
         <div className="column">
           {/* 入力された時に各set*を実行してuseStateを最新にする */}
           <Input onChange={ (e) => setLecture(e.target.value) } label="講義名" placeholder="例: 情報リテラシー" />
-          <Input onChange={ (e) => setTeacher(e.target.value) } label="教員名" placeholder="例: 落単太郎" />
+          <Input onChange={ (e) => setTeacher(e.target.value) } label="教員名" placeholder="例: 落単 太郎" />
           <Select onChange={ (e) => setCategory(e.target.value) } label="授業区分" categories={ categorieOptions } />
           <Select onChange={ (e) => setYear(e.target.value) } label="開講年度" categories={ yearOptions } />
           <Select onChange={ (e) => setTerm(e.target.value) } label="開講学期" categories={ termOptions } />

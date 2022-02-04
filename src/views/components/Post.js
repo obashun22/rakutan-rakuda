@@ -1,8 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import "../../stylesheets/components/Post.css";
+import kusa from "../../images/kusa/kusa.png";
+import kusaWhite from "../../images/kusa/kusa_white.png";
+
+import { updateLike } from '../../api/PostAPI';
+import { useEffect } from 'react/cjs/react.development';
 
 const Post = (props) => {
   const post = props.post;
+  const [isLiked, setIsLiked] = useState(false);
+  const [likeCount, setLikeCount] = useState(0);
+  useEffect(() => {
+    const count = post.like;
+    setLikeCount(count);
+    
+    // 草のログを取得
+    const likeLog = localStorage.getItem('like_log');
+    let log = [];
+    if (likeLog !== null) {
+      log = JSON.parse(likeLog);
+    } else {
+      localStorage.setItem('like_log', JSON.stringify(log));
+    }
+    if (log.includes(post.id)) { // 既に草を押しているか判定
+      setIsLiked(true);
+    }
+  }, []);
   return (
     <div id="post" className="card">
       <div className="columns is-marginless">
@@ -28,7 +52,7 @@ const Post = (props) => {
         </div>
 
         {/* コメント */}
-        <div className="column px-5 py-4">
+        <div className="column px-5 py-4 card-right">
           <div className="comment">
             <div className="comment-top">
               <h4 className="has-text-weight-bold is-size-6">コメント</h4>
@@ -36,6 +60,44 @@ const Post = (props) => {
               {/* <a className="killLinkStyle setting-icon"><span class="fas fa-ellipsis-h"></span></a> */}
             </div>
             <p className="my-1">{ post.comment }</p>
+          </div>
+          <div className="spacing" />
+          <div className="action">
+            <div className='kusa pt-1'>
+              {
+                isLiked ?
+                  <img
+                    src={kusa}
+                    alt="kusa"
+                    className='kusa-img kusa-anim'
+                  />
+                :
+                  <img
+                    src={kusaWhite}
+                    alt="kusa white"
+                    className='kusa-img is-clickable'
+                    onClick={() => {
+                      setIsLiked(true);
+                      setLikeCount(likeCount + 1);
+
+                      // 草のログを更新
+                      let log = [];
+                      const likeLog = localStorage.getItem('like_log');
+                      if (likeLog !== null) {
+                        log = JSON.parse(likeLog);
+                        log.push(post.id);
+                        localStorage.setItem('like_log', JSON.stringify(log));
+                        updateLike(post.id); // データベース更新
+                      } else {
+                        log = [];
+                        log.push(post.id);
+                        localStorage.setItem('like_log', JSON.stringify(log));
+                      }
+                    }}
+                  />
+              }
+              <p className='kusa-count pl-2'>{likeCount}</p>
+            </div>
           </div>
         </div>
 

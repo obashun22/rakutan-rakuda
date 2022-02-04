@@ -40,6 +40,16 @@
   border-radius: 3px;
 }
 
+/* カード右側 */
+.card-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.spacing {
+  flex-grow: 1;
+}
+
 /* コメント */
 .comment {
   text-align: left;
@@ -58,6 +68,43 @@
   font-size: 0.9rem;
   max-width: 700px;
 }
+
+.action {
+  text-align: right;
+}
+
+.kusa {
+  display: inline-block;
+}
+
+.kusa-img {
+  height: 24px;
+}
+
+.kusa-count {
+  line-height: 24px;
+  float: right;
+  color: #888;
+}
+
+.kusa-anim {
+  animation: poyopoyo 2s ease-out;
+}
+@keyframes poyopoyo {
+  0% {
+    transform: scale(0.5);
+  }
+  8%{
+    transform: scale(1.1);
+  }
+  15% {
+    transform: scale(0.8);
+  }
+  30% {
+    transform: scale(1.0);
+  }
+}
+
 
 @media screen and (max-width: 768px) {
   #post {

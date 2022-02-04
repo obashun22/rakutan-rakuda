@@ -26,7 +26,7 @@ const Home = () => {
   // 検索バーのしたの文字を管理
   const [notion, setNotion] = useState(guide);
 
-  // 初期読み込み／最新の投稿６件を取得
+  // 初期読み込み／最新の投稿n件を取得／草のログを取得
   useEffect(() => {
     getLatestPosts()
       .then(res => {
