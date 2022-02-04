@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import "../../stylesheets/components/Post.css";
 import kusa from "../../images/kusa/kusa.png";
@@ -11,17 +11,19 @@ const Post = (props) => {
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(post.like);
   
-  // 草のログを取得
-  const likeLog = localStorage.getItem('like_log');
-  let log = [];
-  if (likeLog !== null) {
-    log = JSON.parse(likeLog);
-  } else {
-    localStorage.setItem('like_log', JSON.stringify(log));
-  }
-  if (log.includes(post.id)) { // 既に草を押しているか判定
-    setIsLiked(true);
-  }
+  useEffect(() => {
+    // 草のログを取得
+    const likeLog = localStorage.getItem('like_log');
+    let log = [];
+    if (likeLog !== null) {
+      log = JSON.parse(likeLog);
+    } else {
+      localStorage.setItem('like_log', JSON.stringify(log));
+    }
+    if (log.includes(post.id)) { // 既に草を押しているか判定
+      setIsLiked(true);
+    }
+  }, [post]);
 
   return (
     <div id="post" className="card">
