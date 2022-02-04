@@ -5,30 +5,24 @@ import kusa from "../../images/kusa/kusa.png";
 import kusaWhite from "../../images/kusa/kusa_white.png";
 
 import { updateLike } from '../../api/PostAPI';
-import { useEffect } from 'react/cjs/react.development';
 
 const Post = (props) => {
-  const [post, setPost] = useState(props.post);
+  const post = props.post;
   const [isLiked, setIsLiked] = useState(false);
-  const [likeCount, setLikeCount] = useState(0);
-  useEffect(() => {
-    // const count = post.like;
-    const count = 10;
-    setLikeCount(count);
-    
-    // 草のログを取得
-    const likeLog = localStorage.getItem('like_log');
-    let log = [];
-    if (likeLog !== null) {
-      log = JSON.parse(likeLog);
-    } else {
-      localStorage.setItem('like_log', JSON.stringify(log));
-    }
-    // if (log.includes(post.id)) { // 既に草を押しているか判定
-    if (log.includes(0)) { // 既に草を押しているか判定
-      setIsLiked(true);
-    }
-  }, [post, setLikeCount, setIsLiked]);
+  const [likeCount, setLikeCount] = useState(post.like);
+  
+  // 草のログを取得
+  const likeLog = localStorage.getItem('like_log');
+  let log = [];
+  if (likeLog !== null) {
+    log = JSON.parse(likeLog);
+  } else {
+    localStorage.setItem('like_log', JSON.stringify(log));
+  }
+  if (log.includes(post.id)) { // 既に草を押しているか判定
+    setIsLiked(true);
+  }
+
   return (
     <div id="post" className="card">
       <div className="columns is-marginless">
