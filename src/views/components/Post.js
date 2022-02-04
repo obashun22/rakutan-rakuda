@@ -26,7 +26,7 @@ const Post = (props) => {
     if (log.includes(post.id)) { // 既に草を押しているか判定
       setIsLiked(true);
     }
-  }, []);
+  }, [post]); // postはuseEffectの外部に依存しているので配列に追加
   return (
     <div id="post" className="card">
       <div className="columns is-marginless">
