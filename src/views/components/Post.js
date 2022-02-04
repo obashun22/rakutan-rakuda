@@ -12,7 +12,9 @@ const Post = (props) => {
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(0);
   useEffect(() => {
-    const count = post.like;
+    // const count = post.like;
+    console.log(post);
+    const count = 10;
     setLikeCount(count);
     
     // 草のログを取得
@@ -23,7 +25,8 @@ const Post = (props) => {
     } else {
       localStorage.setItem('like_log', JSON.stringify(log));
     }
-    if (log.includes(post.id)) { // 既に草を押しているか判定
+    // if (log.includes(post.id)) { // 既に草を押しているか判定
+    if (log.includes(0)) { // 既に草を押しているか判定
       setIsLiked(true);
     }
   }, []);
