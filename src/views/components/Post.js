@@ -7,7 +7,7 @@ import kusaWhite from "../../images/kusa/kusa_white.png";
 import { updateLike } from '../../api/PostAPI';
 
 const Post = (props) => {
-  const post = props.post;
+  const [post, setPost] = useState(props.post);
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(post.like);
   
