@@ -13,7 +13,6 @@ const Post = (props) => {
   const [likeCount, setLikeCount] = useState(0);
   useEffect(() => {
     // const count = post.like;
-    console.log(post);
     const count = 10;
     setLikeCount(count);
     
